@@ -1,3 +1,4 @@
+
 # LyfeStyle
 
 ## Team:
@@ -43,8 +44,6 @@
 ## Mockup:
 
     ![Alt text](<New Wireframe 1.png>)
-
-
 
 
 
