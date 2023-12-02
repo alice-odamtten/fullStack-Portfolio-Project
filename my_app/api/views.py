@@ -9,7 +9,7 @@ tasks =Blueprint('tasks', __name__)
 
 @tasks.route('/home')
 def home():
-    return "welcome home"
+    return render_template('home.html')
 
 @tasks.route('/register', methods = ['POST', 'GET'])
 def register():

@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: rgb(226, 216, 216);
+}
+header {
+    padding: 20px 0;
+}
+    
+header .row {
+    display: flex;
+    align-items: center;
+}
+header h1 {
+    font-weight: 700;
+    margin: 0;
+    color: blue;
+}
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+header p {
+    padding: 0 20px;
+    margin: 0;
+    color: blue;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    /*justify-content: center;
+    align-items: center;*/
+    padding: 30px;
+    
+}
+
+.wrapper.text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper.text h5 {
+    font-size: 50px;
+    color: rgb(45, 145, 106);
+}
+
+.wrapper.text button {
+    width: 210px;
+    height: 45px;
+    background-color: rgb(45, 145, 106);
+    text-align: center;
+    border-radius: 10px;
+    border: white;
+}
+
+.wrapper.text button a {
+    color: white;
+}
+
+.container {
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;  
+}
+.container h5{
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    color:  rgb(45, 145, 106);
+}
+.container.tet {
+   color:  rgb(45, 145, 106);
+   padding-top: 0;
+   padding-left: 13px;
+}
+
+.container form input{
+    border-radius: 15px;
+    border-color: rgb(45, 145, 106);
+    width: 400px;
+    height: 45px;
+    box-shadow: none;
+}
+.container form label{
+    color:  rgb(45, 145, 106);
+}
+.container.button input{
+    background-color: rgb(45, 145, 106);
+    color: white;
+    width: 280px;
+    height: 45px;
+    background-color: rgb(45, 145, 106);
+    border-radius: 10px;
+    border: white;
+}
+
+.container.tet a {
+    text-decoration: underline;
+    color:  rgb(45, 145, 106);
+}
+

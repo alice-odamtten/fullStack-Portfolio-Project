@@ -1,28 +1,29 @@
-% extends 'base.html'%}
+{% extends 'base.html'%}
 {% block content%}
 <section class="container">
-   <div class="row">
-      <div class="col">
-         <form action="" method="post">
+   <h5>HELLO</h5>
+   <P class="container tet">Register to get started</P>
+   <img src="static\images\sign-up.png" alt="sign-up">
+   <form action="" method="post">
             <p>
-               {{ form.first_name.label }}<br>
+               <b>{{ form.first_name.label }}</b><br>
                {{ form.first_name(size =32) }}
             </p>
             <p>
-               {{ form.last_name.label }}<br>
+               <b>{{ form.last_name.label }}</b><br>
                {{ form.last_name(size=32) }}
             </p>
             <p>
-               {{ form.email.label }}<br>
+               <b>{{ form.email.label }}</b><br>
                {{ form.email(size=32) }}
             </p>
             <p>
-               {{ form.password.label }}<br>
+               <b>{{ form.password.label }}</b><br>
                {{ form.password(size=32) }}
             </p>
-            <p>{{ form.submit() }}</p>
-         </form>
-      </div>
-   </div>
+            <p class=" container button">{{ form.submit() }}</p>
+   </form>
+   <p class="container tet">Already signed up <a href="{{ url_for('tasks.login') }}">Login</a></p>
+      
 </section>
 {% endblock %}

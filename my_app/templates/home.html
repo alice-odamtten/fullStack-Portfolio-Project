@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block content%}
+<section>
+    <div class="wrapper">
+        <div>
+            <img src="static\images\telecommuting.png" alt="an image of a girl chiling">
+        </div>
+        <div class="wrapper text">
+            <h5>WELCOME TO LyfeStyle</h5>
+            <p>
+                Track your schedule, get music recommendations and <br>
+                downwload your favorite youtube videos
+            </p>
+            <button type="button"><a href="{{ url_for('tasks.register') }}">Register</a></button>
+            <br>
+            <button type="button"><a href="{{ url_for('tasks.login') }}">Login</a></button>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
