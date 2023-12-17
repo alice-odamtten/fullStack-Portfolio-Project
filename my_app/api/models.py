@@ -1,12 +1,14 @@
 from my_app import db
 from flask_login import UserMixin
 
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key = True)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     email = db.Column(db.String, unique = True)
     password = db.Column(db.String)
+    #image_file = db.Column(db.String(140), nullable=False, default='profiledefualt.jpg')
     tasks = db.relationship('Task', backref='owner')
 
     def __repr__(self):
@@ -21,3 +23,9 @@ class Task(db.Model):
 
     def __repr__(self):
         return f'Task {self.task_name}{self.due_date}'
+    
+class Download(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    url = db.Column(db.String(400), nullable=False)
+    todo_owner = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user = db.relationship('User', backref='downloads')

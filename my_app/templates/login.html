@@ -1,18 +1,21 @@
 {% extends 'base.html'%}
 {% block content%}
-<section class="container">
-   <img src="static\images\tablet-login.png" alt="sign-up">
-   <form action="" method="post">
-            <p>
-               <b>{{ form.email.label }}</b><br>
-               {{ form.email(size =32) }}
-            </p>
-            <p>
-               <b>{{ form.password.label }}</b><br>
-               {{ form.password(size=32) }}
-            </p>
+<section>
+   <p class="p2">LyfeStyle</p>
+   <div  class="container">
+      <img src="static\images\tablet-login.png" alt="sign-up">
+      <form action="" method="post">
+               <p>
+                  <b>{{ form.email.label }}</b><br>
+                  {{ form.email(size =32, placeholder=form.email.label.text) }}
+               </p>
+               <p>
+                  <b>{{ form.password.label }}</b><br>
+                  {{ form.password(size=32, placeholder=form.password.label.text) }}
+               </p>
             <p class=" container button">{{ form.submit() }}</p>
-         </form>
-         <p class="container tet">No account yet?  <a href="{{ url_for('tasks.register') }}">Register</a></p>
+       </form>
+      <p class="container tet">Don't have an account?  <a href="{{ url_for('tasks.register') }}">Register</a></p>
+   </div>
 </section>
 {% endblock %}

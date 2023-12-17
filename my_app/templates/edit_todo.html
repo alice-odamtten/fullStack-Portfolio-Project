@@ -6,6 +6,7 @@
       <div class="col" a>
          <!-- A column inside a row inside a container! -->
          <form action="" method="post">
+            {{ form.csrf_token }}
             <p>
                {{ form.task_name.label }}<br>
                {{ form.task_name(size =32) }}

@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="container1">
+   <nav> 
+        <p class="p1">LyfeStyle</p>
+        <br>
+        <p><b><a href="{{ url_for('tasks.todos')}}"> My todos</a></b></p>
+        <br>
+        <p><b><a href="{{ url_for('tasks.home')}}"> Home</a></b></p>
+    </nav>
+    <div >
+        <h1>Download YouTube <br>
+            Video By Link</h1>
+        <br>
+        <form action=" "method="post" class="container1 flex">
+            {{ form.csrf_token }}
+            <p>
+                {{form.url(size=32, placeholder=form.url.label.text)}}
+            </p>
+            <P class="container1 button" id="movement">
+                {{form.submit()}}
+            </P>
+        </form>
+    </div>
+</section>
+{% endblock %}

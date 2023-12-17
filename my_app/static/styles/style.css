@@ -57,9 +57,165 @@ header p {
     color: white;
 }
 
-.container {
-    padding: 30px;
+.container1 div {
+    padding: 30px 180px;
     font-family: 'Poppins', sans-serif;  
+}
+.container1 nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container1 h1{
+    font-size: 70px;
+    font-family: 'Pacifico', cursive;
+    color:  rgb(45, 145, 106);
+    padding-left: 100px;
+    text-align: center;
+}
+.container1 form {
+    padding-left: 200px;
+}
+.container1 form input{
+    border-radius: 15px;
+    border-color: rgb(45, 145, 106);
+    width: 700px;
+    height: 55px;
+    box-shadow: none;
+}
+.container1 form ::placeholder{
+    color:  rgb(45, 145, 106);
+}
+.container1.flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#movement{
+    bottom: 121px;
+    position: absolute;
+    padding-left: 480px;
+    
+}
+.container1.button input{
+    background-color: rgb(45, 145, 106);
+    color: white;
+    width: 220px;
+    height: 50px;
+    background-color: rgb(45, 145, 106);
+    border-radius: 10px;
+    border: white;
+}
+
+.container1.tet a {
+    text-decoration: underline;
+    color:  rgb(45, 145, 106);
+}
+.p1 {
+    font-size: 70px;
+    font-family: 'Pacifico', cursive;
+    color:  rgb(45, 145, 106);
+    padding-left: 100px;
+    text-align: start;
+    
+}
+.container2{
+    font-family: 'Poppins', sans-serif; 
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 100px;
+}
+.container2.flex{
+    display: flex;
+    flex-basis: column;
+    justify-content: center;
+    
+    padding-bottom: 0;
+}
+.container2.fix{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    padding-top: none;
+}
+.container2.tet {
+    color:  rgb(45, 145, 106);
+    padding-top: 0;
+    padding-left: 13px;
+}
+.container2 img{
+    width: 500px;
+    height: 500px;
+    
+}
+.container2 form{
+    padding-top: 80px;
+    padding-bottom: 0;
+    /*border: 1px  solid black;*/
+}
+.container2 h5{
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
+    color:  rgb(45, 145, 106);
+    text-align: center;
+    padding-top: 70px;
+}
+.container2.tet {
+   color:  rgb(45, 145, 106);
+   padding-top: 0;
+   padding-left: 13px;
+}
+
+.container2 form input{
+    border-radius: 15px;
+    border-color: rgb(45, 145, 106);
+    width: 400px;
+    height: 45px;
+    box-shadow: none;
+}
+.container2 form ::placeholder{
+    color:  rgb(45, 145, 106);
+}
+
+.container2.button input{
+    background-color: rgb(45, 145, 106);
+    color: white;
+    width: 280px;
+    height: 45px;
+    background-color: rgb(45, 145, 106);
+    border-radius: 10px;
+    border: white;
+}
+
+.container2.tet a {
+    text-decoration: underline;
+    color:  rgb(45, 145, 106);
+}
+.container {
+    font-family: 'Poppins', sans-serif; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.p2{
+    font-size: 100px;
+    font-family: 'Pacifico', cursive;
+    color:  rgb(45, 145, 106);
+    padding-left: 100px;
+    text-align: center;
+}
+
+.container img{
+    width: 600px;
+    height: 600px;
+    
+}
+.container form{
+    padding-top: 200px;
+    /*border: 1px  solid black;*/
 }
 .container h5{
     font-size: 50px;
@@ -79,9 +235,10 @@ header p {
     height: 45px;
     box-shadow: none;
 }
-.container form label{
+.container form ::placeholder{
     color:  rgb(45, 145, 106);
 }
+
 .container.button input{
     background-color: rgb(45, 145, 106);
     color: white;
@@ -96,4 +253,101 @@ header p {
     text-decoration: underline;
     color:  rgb(45, 145, 106);
 }
+.todo{
+    display: grid;
+    grid-template-columns: 0.6fr 2.8fr;
+    margin-bottom: 0;
+}
 
+.todo nav{
+    display: flex;
+    flex-flow: column;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.todo nav p {
+    font-size: 18px;
+    color:  rgb(45, 145, 106);
+}
+.todo nav div p {
+    padding: 10px;
+    color:  rgb(45, 145, 106);
+}
+.todo nav div p a{
+    padding: 10px;
+    color:  rgb(45, 145, 106);
+}
+.image{
+    width: 30px;
+    height: 30px;
+}
+.todo nav div{
+    padding-top: 200px;
+}
+.todo .display {
+    background-color:rgb(45, 145, 106);
+    height: 200px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 100px;
+    border-radius: 4px;
+}
+.display h5{
+    position: absolute;
+    bottom: 340px;
+    left: o;
+    padding-left: 15px;
+}
+
+.todo .again {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: whitesmoke;
+    padding-top: 9px;
+    padding-left: 15px;
+    margin-top: 100px;
+    margin-bottom: 0;
+    margin-right: 12px;
+    margin-left: 12px;
+    border-radius: 9px;
+    gap: 10px;
+}
+.buy{
+    background-color: gainsboro;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 35px;
+    border: 1px solid #ccc;
+}
+.buy p{
+    font-family: 'Pacifico', cursive;
+    color:  rgb(45, 145, 106);
+    text-align: center;
+}
+
+.p {
+    font-size: 70px;
+    font-family: 'Pacifico', cursive;
+    color:  rgb(45, 145, 106);
+    padding-left: 100px;
+    text-align: center;
+}
+
+
+.newgrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.indiv{
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: justify;
+}
+.indiv a{
+    color: black;
+}

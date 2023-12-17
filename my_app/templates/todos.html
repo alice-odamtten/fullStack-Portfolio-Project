@@ -1,21 +1,108 @@
 {% extends 'base.html'%}
 {% block content%}
-<section class="container">
-   <button class="add_button "><a href="{{ url_for('tasks.add_tasks')}}">Add New Task</a></button>
-   
-   <div class="row">
-      <div class="col" >
-         {% for todo in todos %}
-         <ul id =round>
-            <li>{{todo.task_name}}</li>
-            <br>
-            <li>{{todo.due_date.strftime('%A,%d,%b,%Y')}}</li>
-            <br>
-            <li>Status: {{todo.status}}</li>
-            <br>
-         </ul>
-         {% endfor %}
-      </div>
+{% set colors = ['#FFC0CB', '#FFD700', '#00FF00', '#87CEFA', '#FFA07A', '#7B68EE', '#FFFF00'] %}
+
+{% macro get_task_color(index) %}
+    {{ colors[index % colors|length] }}
+{% endmacro %}
+<section>
+   <p class="p">LyfeStyle</p>
+   <div class="todo">
+      <nav>
+        
+         <p><b>{{current_user.first_name}}  {{current_user.last_name}}</b></p>
+         <p><b>{{current_user.email}}</b></p>
+         <div>
+            <p><strong>Menu</strong></p>
+            <p>
+               <img src="static\images\create.png" alt="create button" class="image">
+               <b><a href="{{ url_for('tasks.add_tasks')}}"> Create a task</a></b>
+            </p>
+            
+            <p>
+               <img src="static\images\downloadb.png" alt="download button" class="image">
+               <b><a href="{{ url_for('tasks.download')}}">MyDownload</a></b>
+            </p>
+            
+            <p>
+               <img src="static\images\logout.png" alt="logout button" class="image">
+               <strong>
+                  <a href="{{ url_for('tasks.logout')}}">logout</a>
+               </strong>
+            </p>
+         </div>         
+      </nav>
+      <main>
+         <article class="todo display">
+            <h5>My Project</h5>
+         </article>
+         <div class="todo again">
+            <div class="newgrid">
+               <button class="buy"><p>Todo</p></button> 
+               <div>
+                  {% for todo in current_user.tasks %}
+                     {% set index = loop.index - 1 %}
+                     {% if todo.status == 'Not Started' %}
+                     <div class="indiv" style="background-color: {{ get_task_color(index) }};">
+                           <b>{{ todo.due_date.strftime('%A, %d %b %Y') }}</b>
+                           <h3>{{ todo.task_name }}</h3>
+                           <p><b><a href="{{ url_for('tasks.edit_task', id=todo.id)}}">Edit Task</a></b></p>
+                           <p><b><a href="{{ url_for('tasks.delete', id=todo.id)}}">Delete a task</a></b></p>
+                        </div>
+                     {% endif %}
+                  {% endfor %}
+              </div>
+              
+            </div>
+            <div class="newgrid">
+               <button class="buy"><p>In Progress</p></button> 
+               <div>
+                  {% for todo in current_user.tasks %}
+                     {% set index = loop.index - 1 %}  
+                     {% if todo.status == 'Inprogress' %}
+                     <div class="indiv" style="background-color: {{ get_task_color(index) }};">
+                           <b>{{ todo.due_date.strftime('%A, %d %b %Y') }}</b>
+                           <h3>{{ todo.task_name }}</h3>
+                           <p><b><a href="{{ url_for('tasks.edit_task', id=todo.id)}}">Edit Task</a></b></p>
+                           <p><b><a href="{{ url_for('tasks.delete', id=todo.id)}}">Delete a task</a></b></p>
+                        </div>
+                      {% endif %}
+                  {% endfor %}
+              </div>
+              
+            </div>
+            <div class="newgrid"><button class="buy"><p>Completed</p></button> 
+               <div>
+                  {% for todo in current_user.tasks %}
+                     {% set index = loop.index - 1 %}
+                     {% if todo.status == 'COMPLETED' %}
+                     <div class="indiv" style="background-color: {{ get_task_color(index) }};">
+                           <b>{{ todo.due_date.strftime('%A, %d %b %Y') }}</b>
+                           <h3>{{ todo.task_name }}</h3>
+                           <p><b><a href="{{ url_for('tasks.delete', id=todo.id)}}">Delete a task</a></b></p>
+                        </div>
+                      {% endif %}
+                  {% endfor %}
+              </div>
+              
+            </div>
+            <div class="newgrid">
+               <button class="buy"><p>Over due</p></button>
+               <div>
+                  {% for todo in current_user.tasks %}
+                     {% set index = loop.index - 1 %}
+                     {% if wasNow.now() > todo.due_date and todo.status != 'COMPLETED' %}
+                        <div class="indiv" style="background-color: {{ get_task_color(index) }};">
+                           <b>{{ todo.due_date.strftime('%A, %d %b %Y') }}</b>
+                           <h3>{{ todo.task_name }}</h3>
+                           <p><b><a href="{{ url_for('tasks.delete', id=todo.id)}}">Delete a task</a></b></p>
+                        </div>
+                      {% endif %}
+                  {% endfor %}
+               </div>              
+            </div>
+         </div>
+      </main>
    </div>
 </section>
 {% endblock %}

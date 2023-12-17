@@ -1,29 +1,33 @@
 {% extends 'base.html'%}
 {% block content%}
-<section class="container">
-   <h5>HELLO</h5>
-   <P class="container tet">Register to get started</P>
-   <img src="static\images\sign-up.png" alt="sign-up">
-   <form action="" method="post">
-            <p>
-               <b>{{ form.first_name.label }}</b><br>
-               {{ form.first_name(size =32) }}
-            </p>
-            <p>
-               <b>{{ form.last_name.label }}</b><br>
-               {{ form.last_name(size=32) }}
-            </p>
-            <p>
-               <b>{{ form.email.label }}</b><br>
-               {{ form.email(size=32) }}
-            </p>
-            <p>
-               <b>{{ form.password.label }}</b><br>
-               {{ form.password(size=32) }}
-            </p>
-            <p class=" container button">{{ form.submit() }}</p>
-   </form>
-   <p class="container tet">Already signed up <a href="{{ url_for('tasks.login') }}">Login</a></p>
+<section class="container2">
+   <div class="container2 flex">
+      <h5>HELLO</h5>
+      <P class="container2 tet">Register to get started</P>
+   </div>
+   <div class="container2 fix">
+      <img src="static\images\sign-up.png" alt="sign-up">
+      <form action="" method="post">
+               <p>
+                  <b>{{ form.first_name.label }}</b><br>
+                  {{ form.first_name(size =32) }}
+               </p>
+               <p>
+                  <b>{{ form.last_name.label }}</b><br>
+                  {{ form.last_name(size=32) }}
+               </p>
+               <p>
+                  <b>{{ form.email.label }}</b><br>
+                  {{ form.email(size=32) }}
+               </p>
+               <p>
+                  <b>{{ form.password.label }}</b><br>
+                  {{ form.password(size=32) }}
+               </p>
+               <p class=" container2 button">{{ form.submit() }}</p>
+      </form>
+      <p class="container2 tet">Already signed up <a href="{{ url_for('tasks.login') }}">Login</a></p>
+   </div>
       
 </section>
 {% endblock %}

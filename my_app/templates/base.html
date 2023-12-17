@@ -13,20 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   </head>
    <body>
-    <header class="container">
-       <div class="row">
-          <h1 class="col-sm-4">LyfeStyle</h1>
-          <nav class="col-sm-8 text-right">
-            <p><a href="{{ url_for('tasks.home') }}">Home</a></p>
-            {% if current_user.is_anonymous %}
-            <p><a href="{{ url_for('tasks.login') }}">Login</a></p>
-            <p><a href="{{ url_for('tasks.register') }}">Register</a></p>
-            {%else%}
-            <p><a href="{{ url_for('tasks.login') }}">Logout</a></p>
-            {% endif %}
-         </nav>
-       </div>
-    </header>
     {% block content %}
     {% endblock  %}
   </body>
