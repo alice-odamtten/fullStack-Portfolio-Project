@@ -1,4 +1,7 @@
-.venv
-__pycache__
-defualt.html
-todo2.tml
+!.venv/
+.venv/*
+!Downloads/
+Downloads/*
+!__pycache__
+!defualt.html
+!todo2.tml
